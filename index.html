@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- This tells the browser we are using modern HTML5 -->
+<html lang="en">
+<head>
+  <!-- Basic page settings -->
+  <meta charset="UTF-8" />
+  <!-- This line makes the site responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- Link to our CSS file (the styling lives there) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <!-- The top menu that stays at the top of the page -->
+  <header class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <nav>
+      <!-- Each link jumps to a section using its id (e.g. #about) -->
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <!-- The big welcome area with your name and role -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm [Your Name]</h1>
+      <p>Aspiring Web Developer | BSIT Student</p>
+      <!-- A button that scrolls to the contact section -->
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ME ===== -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <!-- Online image from Unsplash (no download needed) -->
+      <img
+        src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400"
+        alt="Profile picture"
+      />
+      <p>
+        Hello! I'm a BSIT fresher passionate about building clean, modern websites.
+        I'm currently learning HTML, CSS, and the fundamentals of web development.
+        This portfolio is my very first project, and I'm excited to keep growing
+        as a developer.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <!-- A grid of cards, one for each skill -->
+    <div class="skills-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">Responsive Design</div>
+      <div class="skill-card">Git &amp; GitHub</div>
+      <div class="skill-card">Problem Solving</div>
+      <div class="skill-card">Teamwork</div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <!-- A grid of project cards -->
+    <div class="projects-grid">
+
+      <!-- Project card 1 -->
+      <div class="project-card">
+        <img
+          src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400"
+          alt="Project one"
+        />
+        <h3>Portfolio Website</h3>
+        <p>My first website built with pure HTML and CSS.</p>
+        <a href="#" class="btn-small">View Project</a>
+      </div>
+
+      <!-- Project card 2 -->
+      <div class="project-card">
+        <img
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400"
+          alt="Project two"
+        />
+        <h3>Landing Page</h3>
+        <p>A clean and responsive landing page design.</p>
+        <a href="#" class="btn-small">View Project</a>
+      </div>
+
+      <!-- Project card 3 -->
+      <div class="project-card">
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400"
+          alt="Project three"
+        />
+        <h3>To-Do App UI</h3>
+        <p>A simple user interface design practice project.</p>
+        <a href="#" class="btn-small">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT FORM ===== -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <!-- This form is just for layout (no JavaScript to send it yet) -->
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 [Your Name]. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
