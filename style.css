@@ -1,0 +1,233 @@
+/* ===== GLOBAL RESET ===== */
+/* Removes default spacing so we control everything ourselves */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* makes sizing easier */
+}
+
+/* ===== COLOR THEME & BASE STYLES ===== */
+/* Setting fonts and default text color for the whole page */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Style for all section headings */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Add space and a max width to each section */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto; /* centers the section */
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s; /* smooth hover effect */
+}
+/* Hover effect: color changes when mouse is over the button */
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.btn-small {
+  display: inline-block;
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-small:hover {
+  text-decoration: underline;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex; /* puts logo and menu side by side */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #2c3e50;
+  position: sticky; /* stays at the top while scrolling */
+  top: 0;
+  z-index: 100;
+}
+.navbar .logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+.navbar nav a:hover {
+  color: #3498db;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  /* A background image with a dark overlay so text is readable */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200");
+  background-size: cover;
+  background-position: center;
+  height: 90vh; /* takes up most of the screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  max-width: 100%;
+  margin: 0;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-container {
+  display: flex; /* image and text side by side */
+  align-items: center;
+  gap: 30px;
+}
+.about-container img {
+  width: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.about-container p {
+  flex: 1; /* text takes the remaining space */
+  font-size: 1.1rem;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-grid {
+  display: grid;
+  /* Creates columns that automatically fit and wrap */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+.skill-card {
+  background-color: #fff;
+  padding: 25px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s; /* smooth lift on hover */
+}
+.skill-card:hover {
+  transform: translateY(-5px); /* lifts the card up slightly */
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; /* keeps image corners rounded */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.project-card h3 {
+  margin: 15px;
+}
+.project-card p {
+  margin: 0 15px 15px;
+  color: #666;
+}
+.project-card .btn-small {
+  margin: 0 15px 15px;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact form {
+  display: flex;
+  flex-direction: column; /* stacks inputs vertically */
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 15px;
+}
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.contact button {
+  align-self: center; /* centers the button */
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* These rules apply only on smaller screens (tablets and phones) */
+@media (max-width: 768px) {
+  /* Stack the navbar items */
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+  .navbar nav a {
+    margin: 0 10px;
+  }
+  /* Make hero text smaller on phones */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  /* Stack the about image and text vertically */
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
