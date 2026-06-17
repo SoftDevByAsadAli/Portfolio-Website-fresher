@@ -14,7 +14,7 @@ A clean, responsive personal portfolio website built from scratch using only HTM
 
 ## Live Demo
 
-[View Live Site](https://your-username.github.io/portfolio/)
+[View Live Site](https://softdevbyasadali.github.io/Portfolio-Website-fresher/)
 <!-- Replace with your real GitHub Pages link after hosting -->
 
 ## Features
